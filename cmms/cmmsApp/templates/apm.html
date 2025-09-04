@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARL APM Suite: Total Asset Performance Management</title>
+    <link rel="stylesheet" href="{% static 'css/apm.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/factory.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+{% include 'header.html' %}
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="headline">CARL APM Suite:<br>Total Asset Performance Management</h1>
+            
+        </div>
+    </header>
+
+    <main>
+        <section class="section capabilities-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-brain section-icon"></i> Core Capabilities</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon-wrapper"><i class="fas fa-cogs card-icon"></i></div>
+                        <h3>Predictive Maintenance & Condition Monitoring</h3>
+                        <ul>
+                            <li>Real-time asset health tracking via IoT integrations</li>
+                            <li>AI-driven failure prediction and root cause analysis</li>
+                            <li>Threshold-based alerts and automated intervention requests</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon-wrapper"><i class="fas fa-chart-line card-icon"></i></div>
+                        <h3>Advanced Dashboards & Analytics</h3>
+                        <ul>
+                            <li>Fully customizable dashboards for KPIs, SLAs, and lifecycle metrics</li>
+                            <li>Embedded Plotly Dash visualizations for deep performance insights</li>
+                            <li>Executive summaries tailored for strategic decision-making</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon-wrapper"><i class="fas fa-sync-alt card-icon"></i></div>
+                        <h3>Lifecycle Asset Management</h3>
+                        <ul>
+                            <li>End-to-end visibility from acquisition to decommissioning</li>
+                            <li>Maintenance history, cost tracking, and performance benchmarking</li>
+                            <li>Seamless integration with ERP, BIM, and GIS systems</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon-wrapper"><i class="fas fa-tools card-icon"></i></div>
+                        <h3>Work Order & Resource Optimization</h3>
+                        <ul>
+                            <li>Smart scheduling with graphical planning tools</li>
+                            <li>Mobile-first technician interface (CARL Touch, CARL Flash)</li>
+                            <li>Automated workflows for preventive, corrective, and regulatory tasks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section modular-architecture-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-cube section-icon"></i> Modular Architecture</h2>
+                <p class="section-description">
+                    CARL’s APM suite is built on a modular, web-native architecture that supports:
+                </p>
+                <div class="architecture-grid">
+                    <div class="arch-item">
+                        <i class="fas fa-database arch-icon"></i>
+                        <h4>CARL Source</h4>
+                        <p>The central CMMS/EAM engine, 100% HTML-based, no plug-ins required.</p>
+                    </div>
+                    <div class="arch-item">
+                        <i class="fas fa-map-marked-alt arch-icon"></i>
+                        <h4>CARL Maps</h4>
+                        <p>GIS and BIM-enabled spatial asset visualization.</p>
+                    </div>
+                    <div class="arch-item">
+                        <i class="fas fa-wifi arch-icon"></i>
+                        <h4>CARL IoT Platform</h4>
+                        <p>Real-time data ingestion and action triggering from connected devices.</p>
+                    </div>
+                    <div class="arch-item">
+                        <i class="fas fa-industry arch-icon"></i>
+                        <h4>CARL Factory</h4>
+                        <p>Tailored for industrial maintenance and TPM traceability.</p>
+                    </div>
+                </div>
+                <p class="integration-note">
+                    All modules are interoperable via REST APIs, Web Services, and configurable interfaces—ensuring seamless integration with your existing IT ecosystem.
+                </p>
+            </div>
+        </section>
+
+        <section class="section security-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-shield-alt section-icon"></i> Security & Compliance</h2>
+                <p class="section-description">Built with ISO 27001-aligned controls, CARL ensures:</p>
+                <ul class="security-list">
+                    <li><i class="fas fa-lock list-icon-check"></i> Role-based access and audit trails</li>
+                    <li><i class="fas fa-cloud list-icon-check"></i> Secure SaaS or on-premise deployment options</li>
+                    <li><i class="fas fa-clipboard-check list-icon-check"></i> Regulatory compliance for safety, environment, and asset traceability</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section why-carl-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-rocket section-icon"></i> Why Choose CARL?</h2>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <i class="fas fa-globe-americas why-icon"></i>
+                        <h3>Proven Across Sectors</h3>
+                        <p>Manufacturing, transport, healthcare, energy, and public infrastructure.</p>
+                    </div>
+                    <div class="why-item">
+                        <i class="fas fa-mobile-alt why-icon"></i>
+                        <h3>Mobile-Ready</h3>
+                        <p>Empower technicians and supervisors on the go with intuitive mobile interfaces.</p>
+                    </div>
+                    <div class="why-item">
+                        <i class="fas fa-expand why-icon"></i>
+                        <h3>Scalable Solution</h3>
+                        <p>From single-site operations to enterprise-wide deployments, CARL grows with you.</p>
+                    </div>
+                    <div class="why-item">
+                        <i class="fas fa-lightbulb why-icon"></i>
+                        <h3>Smart & Future-Proof</h3>
+                        <p>AI, IoT, and BIM-ready for intelligent, future-proof asset management.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta-banner">
+            <div class="container">
+                <h2 class="cta-title"><i class="fas fa-phone-alt section-icon"></i> Ready to Elevate Your Asset Strategy?</h2>
+                <p class="cta-description">
+                    CARL isn’t just software—it’s your strategic partner in operational excellence. Let us help you unlock the full potential of your assets with a suite that’s complete, compliant, and built for your sector.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary"><i class="fas fa-hand-point-right"></i> Request a Demo</a>
+                    <a href="#" class="btn btn-secondary"><i class="fas fa-file-alt"></i> Download Technical Datasheet</a>
+                    <a href="#" class="btn btn-secondary"><i class="fas fa-exchange-alt"></i> Explore Integration Options</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% include 'footer.html' %}
+
+</body>
+</html>

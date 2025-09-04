@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARL: Smarter Asset Management</title>
+    <link rel="stylesheet" href="{% static 'css/eam.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/factory.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+{% include 'header.html' %}
+    <header class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-with-chips-and-electronic-paths-31835-large.mp4" type="video/mp4">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-with-chips-and-electronic-paths-31835-large.webm" type="video/webm">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>CARL: The Foundation of Smarter Asset Management</h1>
+            <p>Built for compliance. Engineered for uptime.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Request a Demo</a>
+                <a href="#" class="btn btn-secondary">Explore Sector Solutions</a>
+                <a href="#" class="btn btn-secondary">Download Technical Overview</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="section container">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">☁️</span>
+                <h3>Cloud-Based</h3>
+                <p>Secure, scalable access across teams and geographies.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🧩</span>
+                <h3>Modular Architecture</h3>
+                <p>Activate only what you need—customize per site or sector.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🔐</span>
+                <h3>ISO 27001-Ready</h3>
+                <p>Security-first design with audit trails and RBAC.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🔗</span>
+                <h3>Seamless Integrations</h3>
+                <p>ERP, SCADA, GIS, IoT—plug in and go.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="section container benefits-section">
+        <div class="benefits-left">
+            <h2 class="section-title-left">Optimize Operations</h2>
+            <h2 class="section-title-left">Extend Asset Lifecycles</h2>
+            <h2 class="section-title-left">Reduce Downtime</h2>
+            <h2 class="section-title-left">Ensure Compliance</h2>
+        </div>
+        <div class="benefits-right">
+            <ul>
+                <li>Predictive maintenance powered by IoT</li>
+                <li>Real-time dashboards with drill-down analytics</li>
+                <li>Automated work orders and SLA tracking</li>
+                <li>Audit-ready logs and compliance workflows</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="section container">
+        <h2 class="section-title">How CARL Works: Interactive Explainer</h2>
+        <div class="flow-chart">
+            <div class="flow-step">
+                <h4>Data Ingestion</h4>
+                <p>IoT, SCADA, ERP</p>
+            </div>
+            <div class="flow-arrow"></div>
+            <div class="flow-step">
+                <h4>Processing Layer</h4>
+                <p>Celery, Django, Channels</p>
+            </div>
+            <div class="flow-arrow"></div>
+            <div class="flow-step">
+                <h4>Visualization</h4>
+                <p>Plotly Dash, React</p>
+            </div>
+            <div class="flow-arrow"></div>
+            <div class="flow-step">
+                <h4>Action Layer</h4>
+                <p>Alerts, Work Orders, Reports</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="case-study" class="case-study">
+        <div class="case-study-overlay"></div>
+        <div class="case-study-content container">
+            <p class="testimonial-quote">“CARL helped us reduce downtime by 40% and streamline compliance reporting.”</p>
+            <p class="testimonial-author">— Rajiv Menon, Plant Manager, NTPC</p>
+            <img src="https://via.placeholder.com/150x50/333/fff?text=NTPC_Logo" alt="NTPC Logo" class="testimonial-logo">
+        </div>
+    </section>
+
+    <section id="metrics" class="section container">
+        <h2 class="section-title">Visual Data Section</h2>
+        <div class="data-table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Before</th>
+                        <th>After</th>
+                        <th>Change</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Maintenance Costs</td>
+                        <td>₹12M</td>
+                        <td>₹8.6M</td>
+                        <td><span class="change-down">↓ 28%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Asset Uptime</td>
+                        <td>78%</td>
+                        <td>94%</td>
+                        <td><span class="change-up">↑ 35%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Work Order Closure Rate</td>
+                        <td>3 days</td>
+                        <td>1.5 days</td>
+                        <td><span class="change-up">2× faster</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="solutions" class="section">
+        <h2 class="section-title">Sector Solutions</h2>
+        <div class="solutions-carousel container">
+            <div class="carousel-tabs">
+                <button class="tab-button active" data-tab="utilities">Utilities</button>
+                <button class="tab-button" data-tab="manufacturing">Manufacturing</button>
+                <button class="tab-button" data-tab="transport">Transport</button>
+                <button class="tab-button" data-tab="public-sector">Public Sector</button>
+            </div>
+            <div class="carousel-content">
+                <div class="carousel-card" id="utilities">
+                    <h3>Utilities</h3>
+                    <p>Aging infrastructure, grid stability, regulatory pressure.</p>
+                </div>
+                <div class="carousel-card hidden" id="manufacturing">
+                    <h3>Manufacturing</h3>
+                    <p>Downtime, quality control, supply chain integration.</p>
+                </div>
+                <div class="carousel-card hidden" id="transport">
+                    <h3>Transport</h3>
+                    <p>Fleet maintenance, route optimization, safety compliance.</p>
+                </div>
+                <div class="carousel-card hidden" id="public-sector">
+                    <h3>Public Sector</h3>
+                    <p>Budget constraints, legacy systems, public accountability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture" class="section container">
+        <h2 class="section-title">Platform Architecture Snapshot</h2>
+        <div class="architecture-diagram">
+            <div class="arch-layer layer-1" data-tooltip="Sensor data, device logs, and enterprise information.">
+                <h4>Data Layer</h4>
+                <p>IoT, SCADA, ERP</p>
+            </div>
+            <div class="arch-layer layer-2" data-tooltip="Real-time processing, task queues, and data handling.">
+                <h4>Processing Layer</h4>
+                <p>Django, Celery, Channels</p>
+            </div>
+            <div class="arch-layer layer-3" data-tooltip="Interactive dashboards and a modern user interface.">
+                <h4>Visualization Layer</h4>
+                <p>Plotly Dash, React</p>
+            </div>
+            <div class="arch-layer layer-4" data-tooltip="Security controls, access management, and compliance.">
+                <h4>Security Layer</h4>
+                <p>ISO 27001, RBAC, audit logs</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section container">
+        <h2 class="section-title">Certifications & Recognition</h2>
+        <div class="certifications-grid">
+            <img src="https://via.placeholder.com/150x80/6c757d/fff?text=ISO%2027001" alt="ISO 27001 Certified" class="badge-logo">
+            <img src="https://via.placeholder.com/150x80/6c757d/fff?text=Azure%20Partner" alt="Azure Partner" class="badge-logo">
+            <img src="https://via.placeholder.com/150x80/6c757d/fff?text=Smart%20City%20Award" alt="Smart City Innovation Award" class="badge-logo">
+            <img src="https://via.placeholder.com/150x80/6c757d/fff?text=Top%20EAM%20Platform" alt="Top EAM Platform 2025" class="badge-logo">
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <h2>Ready to future-proof your asset strategy?</h2>
+        <div class="cta-buttons">
+            <a href="#" class="btn btn-tertiary">Book a Demo</a>
+            <a href="#" class="btn btn-tertiary">Talk to a Consultant</a>
+            <a href="#" class="btn btn-tertiary">Download Source Guide</a>
+        </div>
+    </section>
+    
+    <script>
+        // JavaScript for carousel tabs
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const carouselCards = document.querySelectorAll('.carousel-card');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove 'active' class from all buttons and 'hidden' from all cards
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    carouselCards.forEach(card => card.classList.add('hidden'));
+
+                    // Add 'active' class to the clicked button
+                    button.classList.add('active');
+
+                    // Show the corresponding card
+                    const targetId = button.dataset.tab;
+                    document.getElementById(targetId).classList.remove('hidden');
+                });
+            });
+        });
+    </script>
+{% include 'footer.html' %}
+</body>
+</html>

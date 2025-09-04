@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="CARL Work Plans | Preventive Maintenance Planning & AI Scheduling">
+    <meta name="description" content="Standardize and automate preventive maintenance with CARL Work Plans. Build time/meter/IoT plans, optimize schedules with AI, execute on mobile, and visualize on maps/BIM.">
+    <meta name="keywords" content="CARL Work Plans, preventive maintenance plans, CMMS scheduling, CARL Optim, CARL Maps, CARL Touch, condition-based maintenance, IoT maintenance">
+    <title>CARL Work Plans</title>
+    <link rel="stylesheet" href="{% static 'css/plans.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/factory.css' %}">
+    <link rel="icon" href="{% static 'images/logo1.png' %}">
+     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="headline">CARL Work Plans</h1>
+            <p class="subheadline">Plan, schedule, and execute preventive maintenance with confidence—backed by real-time data, maps, and mobile execution.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Request a demo</a>
+                <a href="#" class="btn btn-secondary">Get pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="section elevator-pitch-section">
+            <div class="container">
+                <p class="elevator-pitch">
+                    CARL Work Plans is the planning engine inside CARL Source that turns maintenance policy into actionable, scheduled work. Build time-, meter-, and condition-based plans, simulate workloads, reserve skills and parts, and publish optimized technician calendars—then execute via CARL Touch on Android/iOS with full traceability. Add CARL Optim (AI scheduling), CARL Maps (2D/3D plans & GIS), and CARL IoT (sensor triggers) to go from reactive to predictive.
+                </p>
+            </div>
+        </section>
+
+        <section class="section who-it-is-for-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-user-friends icon"></i> Who it’s for</h2>
+                <div class="role-grid">
+                    <div class="role-card">
+                        <i class="fas fa-calendar-alt role-icon"></i>
+                        <h3>Maintenance Managers & Planners</h3>
+                        <p>Standardize PM strategies, balance workloads, and assure compliance.</p>
+                    </div>
+                    <div class="role-card">
+                        <i class="fas fa-user-cog role-icon"></i>
+                        <h3>Supervisors</h3>
+                        <p>Publish weekly calendars, track progress and SLAs, and reassign on the fly.</p>
+                    </div>
+                    <div class="role-card">
+                        <i class="fas fa-user-hard-hat role-icon"></i>
+                        <h3>Technicians</h3>
+                        <p>Receive clear tasks, checklists, and e-signatures on mobile, even offline.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section outcomes-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-chart-line icon"></i> Outcomes that matter</h2>
+                <ul class="outcomes-list">
+                    <li><i class="fas fa-wrench list-icon"></i> Fewer breakdowns, longer asset life through planned, preventive work.</li>
+                    <li><i class="fas fa-lightbulb list-icon"></i> Higher planner & crew productivity with AI-assisted scheduling.</li>
+                    <li><i class="fas fa-shield-alt list-icon"></i> Full auditability—traceable, validated, and signed digital reports.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section features-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-cogs icon"></i> What’s in CARL Work Plans</h2>
+
+                <div class="feature-card">
+                    <h3>Plan Design & Automation</h3>
+                    <p>
+                        Build time-, meter-, and condition-based plans to automate your maintenance strategy.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-circle-notch list-icon"></i> <strong>Plan types:</strong> calendar-time, usage-based, and condition/IoT-driven thresholds.</li>
+                        <li><i class="fas fa-file-invoice list-icon"></i> <strong>Templates & tasks:</strong> reusable job plans with labor, tools, authorizations, and checklists.</li>
+                        <li><i class="fas fa-truck-loading list-icon"></i> <strong>Auto-generation of work orders:</strong> plans release WOs automatically with assignment rules.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Scheduling & Capacity</h3>
+                    <p>
+                        Manage workloads and optimize schedules to maximize crew efficiency.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-calendar-day list-icon"></i> <strong>Graphical planning:</strong> drag, drop, and adjust schedules inside CARL Source.</li>
+                        <li><i class="fas fa-brain list-icon"></i> <strong>AI optimization:</strong> propose the best resource schedule considering skills, availability, and SLAs.</li>
+                        <li><i class="fas fa-chart-area list-icon"></i> <strong>Workload simulation:</strong> preview plan releases and smooth peaks before publishing.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Spatial Context <span class="badge">(optional: CARL Maps)</span></h3>
+                    <p>
+                        Visualize assets and scheduled work on maps, floor plans, and BIM models.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-map-marked-alt list-icon"></i> See assets on 2D/3D maps, plans, BIM, and navigate from site maps down to rooms.</li>
+                        <li><i class="fas fa-search-location list-icon"></i> Launch work, inspections, and searches directly from the map; geoposition equipment.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Execution on Mobile <span class="badge">(CARL Touch)</span></h3>
+                    <p>
+                        Empower technicians to complete work orders in the field with a powerful mobile app.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-mobile-alt list-icon"></i> Technicians receive work with priorities & checklists, capture photos, meters, and parts.</li>
+                        <li><i class="fas fa-signature list-icon"></i> Capture client e-signatures, online or offline.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section proof-points-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-stamp icon"></i> Proof points</h2>
+                <div class="proof-points-container">
+                    <div class="proof-point">
+                        <h3>Preventive plan automation in practice:</h3>
+                        <p>Malteurop case—preventive plans automated; jobs uploaded and allocated based on availability.</p>
+                    </div>
+                    <div class="proof-point">
+                        <h3>Traceability:</h3>
+                        <p>“All information is traceable, validated, signed and accessible in real time.” (Dentaid, regulated environment).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section key-features-grid-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-th-large icon"></i> Key features</h2>
+                <div class="key-features-grid">
+                    <div class="key-feature-card">
+                        <i class="fas fa-file-alt feature-icon"></i>
+                        <p>Preventive plan templates</p>
+                    </div>
+                    <div class="key-feature-card">
+                        <i class="fas fa-redo-alt feature-icon"></i>
+                        <p>Auto WO release & assignments</p>
+                    </div>
+                    <div class="key-feature-card">
+                        <i class="fas fa-robot feature-icon"></i>
+                        <p>AI scheduling (skills/SLA/travel)</p>
+                    </div>
+                    <div class="key-feature-card">
+                        <i class="fas fa-map feature-icon"></i>
+                        <p>Maps/BIM/GIS planning</p>
+                    </div>
+                    <div class="key-feature-card">
+                        <i class="fas fa-tablet-alt feature-icon"></i>
+                        <p>Mobile execution & e-signatures</p>
+                    </div>
+                    <div class="key-feature-card">
+                        <i class="fas fa-microchip feature-icon"></i>
+                        <p>IoT-driven maintenance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section kpi-highlights-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-star-of-life icon"></i> KPI Highlights</h2>
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <p class="kpi-value">+50%</p>
+                        <p class="kpi-label">Planning time saved</p>
+                    </div>
+                    <div class="kpi-card">
+                        <p class="kpi-value">+30%</p>
+                        <p class="kpi-label">Team productivity</p>
+                    </div>
+                    <div class="kpi-card">
+                        <p class="kpi-value">-15%</p>
+                        <p class="kpi-label">Mileage reduction</p>
+                    </div>
+                </div>
+                <p class="kpi-note">*Vendor-reported benefits; results vary by context.</p>
+            </div>
+        </section>
+
+        <section class="section faqs-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-question-circle icon"></i> FAQs</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq1" class="faq-toggle">
+                        <label for="faq1" class="faq-question">Can CARL Work Plans auto-create work orders?</label>
+                        <div class="faq-answer">
+                            <p>Yes—plans can automatically release WOs on schedule or thresholds; assignments can be proposed/optimized.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq2" class="faq-toggle">
+                        <label for="faq2" class="faq-question">Do technicians need connectivity to complete planned work?</label>
+                        <div class="faq-answer">
+                            <p>No—CARL Touch supports offline execution with later sync. This is ideal for remote sites or basements with poor connectivity.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq3" class="faq-toggle">
+                        <label for="faq3" class="faq-question">Can I see planned work on maps or drawings?</label>
+                        <div class="faq-answer">
+                            <p>Yes—use CARL Maps for GIS, DWG, and BIM navigation and to launch actions from the map.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta-banner-section">
+            <div class="container">
+                <h2 class="section-title cta-title">Ready to get started?</h2>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">See a live planning demo</a>
+                    <a href="#" class="btn btn-secondary">Download briefs</a>
+                    <a href="#" class="btn btn-secondary">Ask for an assessment</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% include 'footer.html' %}
+</body>
+</html>

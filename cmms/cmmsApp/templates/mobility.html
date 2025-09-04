@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="CARL Mobility | Mobile CMMS Apps for Technicians, Stores & Requesters">
+    <meta name="description" content="Speed up maintenance with CARL Mobility—mobile apps for work orders, inspections, inventory, and service requests. Android & iOS, offline mode, maps/BIM, and IoT-ready.">
+    <title>CARL Mobility</title>
+    <link rel="stylesheet" href="{% static 'css/mobility.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/factory.css' %}">
+    <link rel="icon" href="{% static 'images/logo1.png' %}">
+     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+{% include 'header.html' %}
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="headline">CARL Mobility</h1>
+            <p class="subheadline">Give your maintenance teams everything they need—on the move. Plan, execute, and prove maintenance work with mobile apps that sync seamlessly with CARL Source CMMS.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Request a demo</a>
+                <a href="#" class="btn btn-secondary">Talk to an expert</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section elevator-pitch">
+            <div class="container">
+                <h2>Elevator Pitch</h2>
+                <p>
+                    <strong>CARL Mobility</strong> is the mobile suite for CARL Source that equips every role—from requesters to technicians and stock managers—with fast, intuitive apps. Create and track requests, receive and complete work orders, capture photos and signatures, manage parts, and sync data in real time or offline. Built for Android and iOS, CARL Mobility accelerates response times, boosts first-time fix rates, and gives you auditable maintenance records end-to-end.
+                </p>
+            </div>
+        </section>
+
+        <section class="section who-it-is-for">
+            <div class="container">
+                <h2><i class="fas fa-users icon"></i> Who it's for</h2>
+                <div class="role-grid">
+                    <div class="role-card">
+                        <i class="fas fa-user-hard-hat role-icon"></i>
+                        <h3>Technicians & Crews</h3>
+                        <p>Receive work orders, checklists, meters, capture photos/notes, log time, and collect e-signatures.</p>
+                    </div>
+                    <div class="role-card">
+                        <i class="fas fa-boxes role-icon"></i>
+                        <h3>Stock Managers</h3>
+                        <p>Perform receipts, transfers, and inventory counts on the go.</p>
+                    </div>
+                    <div class="role-card">
+                        <i class="fas fa-building role-icon"></i>
+                        <h3>All Employees & Tenants</h3>
+                        <p>Submit service requests with photos/voice and track status via CARL Flash.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section key-outcomes">
+            <div class="container">
+                <h2><i class="fas fa-tachometer-alt icon"></i> Key Outcomes</h2>
+                <ul class="outcomes-list">
+                    <li><i class="fas fa-check-circle list-icon"></i> Faster interventions & higher first-time fix with real-time assignments, guided reports, and checklists.</li>
+                    <li><i class="fas fa-check-circle list-icon"></i> Full traceability—digital reports, timestamps, signatures, and geo-context.</li>
+                    <li><i class="fas fa-check-circle list-icon"></i> Lower inventory costs via mobile receipts, issues, and cycle counts.</li>
+                    <li><i class="fas fa-check-circle list-icon"></i> Fewer duplicate requests with geo-tagged, deduplicated service tickets.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section apps">
+            <div class="container">
+                <h2><i class="fas fa-mobile-alt icon"></i> The CARL Mobility Apps</h2>
+                <div class="app-cards">
+                    <div class="app-card">
+                        <h3>CARL Touch <i class="fas fa-tools app-icon"></i></h3>
+                        <p class="app-subtitle">For Technicians & Stores</p>
+                        <ul>
+                            <li><strong>Work orders in your pocket:</strong> see tasks, SLAs, priorities, and new assignments in real time.</li>
+                            <li><strong>Smart reporting:</strong> complete digital reports, add spare parts, time, and photos; capture customer e-signatures.</li>
+                            <li><strong>Hardware power:</strong> scan barcodes/QR, use camera, GPS, NFC, and more; Android & iOS compatible.</li>
+                        </ul>
+                    </div>
+                    <div class="app-card">
+                        <h3>CARL Flash <i class="fas fa-paper-plane app-icon"></i></h3>
+                        <p class="app-subtitle">For Requesters & Tenants</p>
+                        <ul>
+                            <li><strong>Create requests in seconds:</strong> with wizards, photos/voice, barcode scan, and geolocation.</li>
+                            <li><strong>Avoid duplicates & spot emergencies:</strong> when multiple users report the same issue.</li>
+                            <li><strong>Track status:</strong> from submission to resolution—no calls required.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section offline">
+            <div class="container">
+                <div class="offline-content">
+                    <i class="fas fa-signal-slash offline-icon"></i>
+                    <h2>Works anywhere—even with poor connectivity</h2>
+                    <p>
+                        Keep working offline—create tasks, log activities, add parts and counters; data syncs when back online. Ideal for plants, remote sites, and basements.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section add-ons">
+            <div class="container">
+                <h2>Go beyond mobile: spatial & IoT intelligence (optional add-ons)</h2>
+                <div class="add-ons-grid">
+                    <div class="add-on-card">
+                        <h3><i class="fas fa-map-marked-alt add-on-icon"></i> CARL Maps</h3>
+                        <p>See assets on 2D/3D maps, plans, BIM, and navigate from site maps down to rooms. Launch work, inspections, and searches directly from the map; geoposition equipment.</p>
+                    </div>
+                    <div class="add-on-card">
+                        <h3><i class="fas fa-robot add-on-icon"></i> BL.Predict / CARL IoT</h3>
+                        <p>Connect sensors and equipment data to predict failures, trigger preventive work, and improve uptime.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section what-you-can-do">
+            <div class="container">
+                <h2>What you can do with CARL Mobility</h2>
+                <div class="feature-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-exchange-alt highlight-icon"></i>
+                        <p><strong>WO lifecycle on mobile:</strong> receive → execute → close with full audit trail and signature.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-clipboard-list highlight-icon"></i>
+                        <p><strong>Checklists & compliance:</strong> standardize inspections and record evidence for audits.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-camera highlight-icon"></i>
+                        <p><strong>Photos, voice notes, documents:</strong> capture rich context at the asset.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-dolly-flatbed highlight-icon"></i>
+                        <p><strong>Parts & inventory:</strong> receive, issue, transfer, and count in the field.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-gauge-high highlight-icon"></i>
+                        <p><strong>Meters & readings:</strong> scan and record counters to drive preventive maintenance.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-map-pin highlight-icon"></i>
+                        <p><strong>Geo-context:</strong> locate assets, requests, and work on a map; reduce duplicates.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section proof-points">
+            <div class="container">
+                <h2>Proof points you can show on the page</h2>
+                <ul class="proof-points-list">
+                    <li><i class="fas fa-shield-alt list-icon"></i> <strong>Traceability assured:</strong> digital reports + signatures + timestamps.</li>
+                    <li><i class="fas fa-share-alt list-icon"></i> <strong>Request transparency:</strong> users track progress in CARL Flash.</li>
+                    <li><i class="fas fa-map-signs list-icon"></i> <strong>Spatial awareness:</strong> assets and work visualized on GIS/BIM/2D plans.</li>
+                    <li><i class="fas fa-robot list-icon"></i> <strong>Predictive readiness:</strong> IoT + analytics to anticipate failures.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="section faqs">
+            <div class="container">
+                <h2><i class="fas fa-question-circle icon"></i> FAQs</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq1" class="faq-toggle">
+                        <label for="faq1" class="faq-question">Is CARL Mobility native or web?</label>
+                        <div class="faq-answer">
+                            <p>CARL Touch is a native mobile app that uses device hardware (camera, GPS, barcode, NFC). CARL Flash is also a native app.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq2" class="faq-toggle">
+                        <label for="faq2" class="faq-question">Does it work offline?</label>
+                        <div class="faq-answer">
+                            <p>Yes. Crews can create and complete tasks offline; data syncs when back online. This is ideal for remote sites or basements with poor connectivity.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq3" class="faq-toggle">
+                        <label for="faq3" class="faq-question">Can non-maintenance staff raise tickets?</label>
+                        <div class="faq-answer">
+                            <p>Yes—CARL Flash lets any user submit requests with photos/voice and track status without a maintenance license.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq4" class="faq-toggle">
+                        <label for="faq4" class="faq-question">Do we get maps and BIM?</label>
+                        <div class="faq-answer">
+                            <p>Yes, via the optional CARL Maps module. It supports GIS, DWG plans, and BIM models with multi-scale navigation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq5" class="faq-toggle">
+                        <label for="faq5" class="faq-question">Can it integrate with our ERP/BMS?</label>
+                        <div class="faq-answer">
+                            <p>Yes. CARL Source provides numerous APIs to integrate with your enterprise systems, bringing data together in one flow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta-banner">
+            <div class="container">
+                <h2>Ready to Elevate Your Asset Strategy?</h2>
+                <p>Let us help you unlock the full potential of your assets with a suite that’s complete, compliant, and built for your sector.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary"><i class="fas fa-hand-point-right"></i> See CARL Mobility in action</a>
+                    <a href="#" class="btn btn-secondary"><i class="fas fa-file-download"></i> Download datasheets</a>
+                    <a href="#" class="btn btn-secondary"><i class="fas fa-dollar-sign"></i> Get pricing for your sites</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% include 'footer.html' %}
+
+</body>
+</html>
