@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% load static %}
+{% load static %}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CARL: Smarter Asset Management</title>
     <link rel="stylesheet" href="{% static 'css/eam.css' %}">
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
-  <link rel="stylesheet" href="{% static 'css/factory.css' %}">
-  <link rel="icon" href="{% static 'images/logo1.png' %}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/factory.css' %}"> -->
+    <link rel="icon" href="{% static 'images/logo1.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-{% include 'header.html' %}
+    {% include 'header.html' %}
     <header class="hero">
         <video autoplay muted loop class="hero-video">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-with-chips-and-electronic-paths-31835-large.mp4" type="video/mp4">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-with-chips-and-electronic-paths-31835-large.webm" type="video/webm">
+            <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-with-chips-and-electronic-paths-31835-large.mp4"
+                type="video/mp4">
+            <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-with-chips-and-electronic-paths-31835-large.webm"
+                type="video/webm">
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -34,80 +40,119 @@
         </div>
     </header>
 
-    <section id="features" class="section container">
-        <h2 class="section-title">Key Features</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <span class="feature-icon">☁️</span>
-                <h3>Cloud-Based</h3>
-                <p>Secure, scalable access across teams and geographies.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">🧩</span>
-                <h3>Modular Architecture</h3>
-                <p>Activate only what you need—customize per site or sector.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">🔐</span>
-                <h3>ISO 27001-Ready</h3>
-                <p>Security-first design with audit trails and RBAC.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">🔗</span>
-                <h3>Seamless Integrations</h3>
-                <p>ERP, SCADA, GIS, IoT—plug in and go.</p>
+
+    <section class="features-section">
+        <div class="container">
+            <h2>Key Features</h2>
+            <!-- <p class="subheading">Optimised solutions for infrastructure sectors</p> -->
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="icon">☁️</span>
+                    <h3>Cloud-Based</h3>
+                    <p>Secure, scalable access across teams and geographies.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="icon">🧩</span>
+                    <h3>Modular Architecture</h3>
+                    <p>Activate only what you need—customize per site or sector.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="icon">🔐</span>
+                    <h3>ISO 27001-Ready</h3>
+                    <p>Security-first design with audit trails and RBAC.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="icon">🔗</span>
+                    <h3>Seamless Integrations</h3>
+                    <p>ERP, SCADA, GIS, IoT—plug in and go.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="benefits" class="section container benefits-section">
-        <div class="benefits-left">
-            <h2 class="section-title-left">Optimize Operations</h2>
-            <h2 class="section-title-left">Extend Asset Lifecycles</h2>
-            <h2 class="section-title-left">Reduce Downtime</h2>
-            <h2 class="section-title-left">Ensure Compliance</h2>
-        </div>
-        <div class="benefits-right">
-            <ul>
-                <li>Predictive maintenance powered by IoT</li>
-                <li>Real-time dashboards with drill-down analytics</li>
-                <li>Automated work orders and SLA tracking</li>
-                <li>Audit-ready logs and compliance workflows</li>
-            </ul>
+
+    <section class="benefit-rows">
+        <div class="benefit-rows__wrap">
+            <!-- Row 1 -->
+            <div class="benefit-row">
+                <h3 class="benefit-row__title">Optimize Operations</h3>
+                <p class="benefit-row__point">
+                    <span class="tick" aria-hidden="true">✓</span>
+                    Predictive maintenance powered by IoT
+                </p>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="benefit-row">
+                <h3 class="benefit-row__title">Extend Asset Lifecycles</h3>
+                <p class="benefit-row__point">
+                    <span class="tick" aria-hidden="true">✓</span>
+                    Real-time dashboards with drill-down analytics
+                </p>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="benefit-row">
+                <h3 class="benefit-row__title">Reduce Downtime</h3>
+                <p class="benefit-row__point">
+                    <span class="tick" aria-hidden="true">✓</span>
+                    Automated work orders and SLA tracking
+                </p>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="benefit-row">
+                <h3 class="benefit-row__title">Ensure Compliance</h3>
+                <p class="benefit-row__point">
+                    <span class="tick" aria-hidden="true">✓</span>
+                    Audit-ready logs and compliance workflows
+                </p>
+            </div>
         </div>
     </section>
 
-    <section id="how-it-works" class="section container">
-        <h2 class="section-title">How CARL Works: Interactive Explainer</h2>
-        <div class="flow-chart">
-            <div class="flow-step">
-                <h4>Data Ingestion</h4>
-                <p>IoT, SCADA, ERP</p>
-            </div>
-            <div class="flow-arrow"></div>
-            <div class="flow-step">
-                <h4>Processing Layer</h4>
-                <p>Celery, Django, Channels</p>
-            </div>
-            <div class="flow-arrow"></div>
-            <div class="flow-step">
-                <h4>Visualization</h4>
-                <p>Plotly Dash, React</p>
-            </div>
-            <div class="flow-arrow"></div>
-            <div class="flow-step">
-                <h4>Action Layer</h4>
-                <p>Alerts, Work Orders, Reports</p>
-            </div>
-        </div>
-    </section>
+<section class="wrap-flowchart">
+  <h2 class="title-flowchart">How CARL Works: Interactive Explainer</h2>
+
+  <div class="rail-flowchart">
+    <div class="node-flowchart">
+      <h3>Data Ingestion</h3>
+      <p>IoT, SCADA, ERP</p>
+    </div>
+    <span class="arrow-flowchart"></span>
+
+    <div class="node-flowchart">
+      <h3>Processing Layer</h3>
+      <p>Celery, Django, Channels</p>
+    </div>
+    <span class="arrow-flowchart"></span>
+
+    <div class="node-flowchart">
+      <h3>Visualization</h3>
+      <p>Plotly Dash, React</p>
+    </div>
+    <span class="arrow-flowchart"></span>
+
+    <div class="node-flowchart">
+      <h3>Action Layer</h3>
+      <p>Alerts, Work Orders, Reports</p>
+    </div>
+  </div>
+</section>
+
 
     <section id="case-study" class="case-study">
         <div class="case-study-overlay"></div>
         <div class="case-study-content container">
-            <p class="testimonial-quote">“CARL helped us reduce downtime by 40% and streamline compliance reporting.”</p>
+            <p class="testimonial-quote">“CARL helped us reduce downtime by 40% and streamline compliance reporting.”
+            </p>
             <p class="testimonial-author">— Rajiv Menon, Plant Manager, NTPC</p>
-            <img src="https://via.placeholder.com/150x50/333/fff?text=NTPC_Logo" alt="NTPC Logo" class="testimonial-logo">
+            <img src="https://via.placeholder.com/150x50/333/fff?text=NTPC_Logo" alt="NTPC Logo"
+                class="testimonial-logo">
         </div>
     </section>
 
@@ -202,10 +247,14 @@
     <section id="certifications" class="section container">
         <h2 class="section-title">Certifications & Recognition</h2>
         <div class="certifications-grid">
-            <img src="https://via.placeholder.com/150x80/6c757d/fff?text=ISO%2027001" alt="ISO 27001 Certified" class="badge-logo">
-            <img src="https://via.placeholder.com/150x80/6c757d/fff?text=Azure%20Partner" alt="Azure Partner" class="badge-logo">
-            <img src="https://via.placeholder.com/150x80/6c757d/fff?text=Smart%20City%20Award" alt="Smart City Innovation Award" class="badge-logo">
-            <img src="https://via.placeholder.com/150x80/6c757d/fff?text=Top%20EAM%20Platform" alt="Top EAM Platform 2025" class="badge-logo">
+            <img src="https://via.placeholder.com/150x80/6c757d/fff?text=ISO%2027001" alt="ISO 27001 Certified"
+                class="badge-logo">
+            <img src="https://via.placeholder.com/150x80/6c757d/fff?text=Azure%20Partner" alt="Azure Partner"
+                class="badge-logo">
+            <img src="https://via.placeholder.com/150x80/6c757d/fff?text=Smart%20City%20Award"
+                alt="Smart City Innovation Award" class="badge-logo">
+            <img src="https://via.placeholder.com/150x80/6c757d/fff?text=Top%20EAM%20Platform"
+                alt="Top EAM Platform 2025" class="badge-logo">
         </div>
     </section>
 
@@ -217,7 +266,7 @@
             <a href="#" class="btn btn-tertiary">Download Source Guide</a>
         </div>
     </section>
-    
+
     <script>
         // JavaScript for carousel tabs
         document.addEventListener('DOMContentLoaded', () => {
@@ -240,6 +289,7 @@
             });
         });
     </script>
-{% include 'footer.html' %}
+    {% include 'footer.html' %}
 </body>
+
 </html>
