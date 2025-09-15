@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIS Mapping Integration with CARL</title>
+  <link rel="stylesheet" href="{% static 'css/compliance.css' %}">
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/factory.css' %}">
+  <link rel="stylesheet" href="{% static 'css/gis.css' %}">   <!-- new, scoped CSS -->
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    {% include 'header.html' %}
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="headline">GIS Mapping Integration with CARL</h1>
+        <p class="description-mobility">
+          Make every asset, work order, and meter point location-aware. Our CARL ↔ GIS integrations connect your CMMS/EAM data with interactive maps so teams can plan, execute, and verify work with spatial context.
+        </p>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-primary">Request a demo</a>
+          <a href="#" class="btn btn-primary">Talk to an expert</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- What this enables -->
+    <section class="gis-section">
+      <div class="gis-container">
+        <h2 class="gis-title"><i class="fas fa-map-marked-alt section-icon"></i> What this enables</h2>
+        <span class="gis-underline"></span>
+
+        <ul class="bullets-cols">
+          <li>See assets on a map with layers for plants, substations, pipelines, buildings, roads, hazards, flood/sea-level zones, easements, and utility corridors.</li>
+          <li>Raise or locate WOs from a map click, filter by priority/SLA, and route the nearest crew.</li>
+          <li>Trend and condition overlays (vibration, temperature, power, oil); hotspot and cluster views for failures and alarms.</li>
+          <li>Regulatory &amp; safety views: buffer/zone analysis around HV equipment, LOTO areas, confined spaces, exclusion zones.</li>
+          <li>Field-ready workflows via CARL Flash with offline basemaps, QR/asset lookup, and photo/markup attachments.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Supported platforms & standards -->
+    <section class="gis-section">
+      <div class="gis-container">
+        <h2 class="gis-title"><i class="fas fa-layer-group section-icon"></i> Supported platforms &amp; standards</h2>
+        <span class="gis-underline"></span>
+
+        <div class="pill-grid">
+          <div class="pill">
+            <h3>ArcGIS (Online/Enterprise)</h3>
+            <ul>
+              <li>Feature Services, Hosted Layers, Web Maps</li>
+              <li>GeoJSON export and web map embedding</li>
+              <li>SSO: SAML / OAuth 2.0</li>
+            </ul>
+          </div>
+          <div class="pill">
+            <h3>MapGuide (Open Source / Autodesk)</h3>
+            <ul>
+              <li>Layer management, Fusion Viewer</li>
+              <li>WMS rendering for CARL embeds</li>
+              <li>Public/private layer control</li>
+            </ul>
+          </div>
+          <div class="pill">
+            <h3>External GIS / OGC</h3>
+            <ul>
+              <li>WMS/WFS/WMTS, XYZ tiles</li>
+              <li>GeoServer, QGIS Server compatible</li>
+              <li>GeoJSON &amp; CSV for data exchange</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pill-grid small" style="margin-top:16px;">
+          <div class="pill">
+            <h3>Coordinate systems</h3>
+            <ul>
+              <li>EPSG:4326 (WGS84), EPSG:3857 (Web Mercator)</li>
+              <li>Regional systems (e.g., GDA2020)</li>
+            </ul>
+          </div>
+          <div class="pill">
+            <h3>Identity &amp; Security</h3>
+            <ul>
+              <li>Single Sign-On: SAML 2.0 / OAuth 2.0 / OIDC</li>
+              <li>Role-based access, audit logs, least-privilege tokens</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integration patterns (timeline) -->
+    <section class="gis-section">
+      <div class="gis-container">
+        <h2 class="gis-title"><i class="fas fa-link section-icon"></i> Integration patterns</h2>
+        <span class="gis-underline"></span>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <h3>Embedded Map in CARL</h3>
+            <p>Display ArcGIS/MapGuide or external WMS/WFS inside CARL records and dashboards.</p>
+          </div>
+          <div class="tl-item">
+            <h3>Deep Links from Map to CARL</h3>
+            <p>Click a feature to open the corresponding Asset/Location/WO via Feature ID or custom keys.</p>
+          </div>
+          <div class="tl-item">
+            <h3>Data Sync (one-way or two-way)</h3>
+            <p>Periodic or event-driven sync for geometry and attributes (status, access notes, ownership).</p>
+          </div>
+          <div class="tl-item">
+            <h3>Event/Webhook Triggers</h3>
+            <p>GIS events (e.g., threshold within a polygon) create Work Requests/Orders in CARL with map snapshots.</p>
+          </div>
+          <div class="tl-item">
+            <h3>Mobile &amp; Offline</h3>
+            <p>CARL Flash uses offline basemaps and cached layers; queue sync when coverage returns.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core capabilities -->
+    <section class="gis-section">
+      <div class="gis-container">
+        <h2 class="gis-title"><i class="fas fa-compass section-icon"></i> Core capabilities</h2>
+        <span class="gis-underline"></span>
+
+        <div class="soft-grid">
+          <div class="soft">
+            <h3>Asset geocoding &amp; validation</h3>
+            <ul><li>Store coordinates with accuracy source; validate against site boundaries.</li></ul>
+          </div>
+          <div class="soft">
+            <h3>Work order mapping</h3>
+            <ul><li>Draw polygons/lines/points, attach redlines, and store extents on each WO.</li></ul>
+          </div>
+          <div class="soft">
+            <h3>Proximity &amp; network analysis</h3>
+            <ul><li>Nearest depot/crew/spare, drive-time polygons, response radius.</li></ul>
+          </div>
+          <div class="soft">
+            <h3>Condition overlays</h3>
+            <ul><li>Live meter points &amp; alarms layered on the map; drill into trends from the WO.</li></ul>
+          </div>
+          <div class="soft">
+            <h3>Bulk actions</h3>
+            <ul><li>Select features to raise batch WOs or schedule PMs across a corridor or zone.</li></ul>
+          </div>
+          <div class="soft">
+            <h3>Security &amp; governance</h3>
+            <ul><li>RBAC, GIS group mapping, least-privilege tokens, IP allow-lists, full audit trail.</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typical workflows -->
+    <section class="gis-section">
+      <div class="gis-container">
+        <h2 class="gis-title"><i class="fas fa-route section-icon"></i> Typical workflows</h2>
+        <span class="gis-underline"></span>
+
+        <div class="soft-grid two">
+          <div class="soft"><h3>Click-to-WO</h3><p>Supervisor selects a feature → raises a WO with auto-populated asset/location and map snapshot.</p></div>
+          <div class="soft"><h3>Storm / outage assessment</h3><p>Overlay affected zones, filter impacted assets, dispatch nearest crews.</p></div>
+          <div class="soft"><h3>Compliance &amp; evidence</h3><p>Attach geo-tagged photos, redlines, and inspection forms to the WO.</p></div>
+          <div class="soft"><h3>Capital planning</h3><p>Heatmap repeated failures; overlay condition &amp; age; prioritize renewals by risk and impact.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deployment options -->
+    <section class="gis-section">
+      <div class="gis-container">
+        <h2 class="gis-title"><i class="fas fa-cloud section-icon"></i> Deployment options</h2>
+        <span class="gis-underline"></span>
+
+        <div class="panels">
+          <div class="panel">
+            <h3>Cloud / On-prem / Hybrid</h3>
+            <p>Secure connections to ArcGIS, MapGuide, GeoServer.</p>
+          </div>
+          <div class="panel">
+            <h3>Performance</h3>
+            <p>Vector tiles, server-side BBOX queries, optional caching for high-traffic layers.</p>
+          </div>
+          <div class="panel">
+            <h3>Data residency &amp; privacy</h3>
+            <p>Encryption in transit/at rest; configurable retention and PII redaction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Implementation approach (steps) -->
+    <section class="gis-section">
+      <div class="gis-container">
+        <h2 class="gis-title"><i class="fas fa-tasks section-icon"></i> Implementation approach</h2>
+        <span class="gis-underline"></span>
+
+        <div class="steps">
+          <div class="step"><span class="num">1</span><h4>Discovery</h4><p>Data model &amp; layer inventory, CRS, roles, SSO.</p></div>
+          <div class="step"><span class="num">2</span><h4>Configuration</h4><p>Feature ID linkage, embeds, deep links &amp; webhooks.</p></div>
+          <div class="step"><span class="num">3</span><h4>Pilot</h4><p>1–2 workflows (e.g., Click-to-WO, outage view).</p></div>
+          <div class="step"><span class="num">4</span><h4>Rollout</h4><p>Training, SOPs, KPI dashboards.</p></div>
+          <div class="step"><span class="num">5</span><h4>Support</h4><p>Monitoring, updates, enhancements.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diagrams -->
+    <section class="gis-section">
+      <div class="gis-container">
+        <h2 class="gis-title"><i class="fas fa-diagram-project section-icon"></i> Diagrams</h2>
+        <span class="gis-underline"></span>
+
+        <div class="diagram-grid">
+          <div class="diagram">
+            <h3>Architecture: CARL + GIS</h3>
+            <img src="{% static 'images/gis/carl-gis-architecture.svg' %}" alt="High-level architecture: CARL connected to ArcGIS/MapGuide/External GIS via REST, WMS/WFS, with CARL Flash mobile">
+          </div>
+          <div class="diagram">
+            <h3>Map-driven Work Order</h3>
+            <img src="{% static 'images/gis/carl-gis-workflow-wo.svg' %}" alt="Map pin opening a Work Order panel; actions to create WO, attach snapshot, navigate">
+          </div>
+          <div class="diagram">
+            <h3>Data linking via Feature ID</h3>
+            <img src="{% static 'images/gis/carl-gis-data-linking.svg' %}" alt="Assets, Locations, Meter Points and Work Orders referencing a GIS Feature ID">
+          </div>
+        </div>
+
+        <div class="diagram-grid" style="margin-top:16px;">
+          <div class="diagram">
+            <h3>Security &amp; governance</h3>
+            <img src="{% static 'images/gis/carl-gis-security.svg' %}" alt="Security checklist: SSO, RBAC, API tokens, audit logs, encryption">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="gis-section">
+      <div class="gis-container faq">
+        <h2 class="gis-title"><i class="fas fa-circle-question section-icon"></i> FAQs</h2>
+        <span class="gis-underline"></span>
+
+        <details>
+          <summary>Does it work with existing GIS?</summary>
+          <p>Yes — ArcGIS, MapGuide, and any WMS/WFS-capable server (GeoServer, QGIS Server, etc.).</p>
+        </details>
+        <details>
+          <summary>How are records linked?</summary>
+          <p>We store a GIS Feature ID on Assets/Locations/Meter points/Work Orders for reliable deep links.</p>
+        </details>
+        <details>
+          <summary>Can crews work offline?</summary>
+          <p>Yes — offline basemaps, cached layers, and queued sync in CARL Flash.</p>
+        </details>
+        <details>
+          <summary>What about security?</summary>
+          <p>SSO, role-based permissions, API tokens with scopes, audit logging, and IP allow-lists.</p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Keep your reveal scripts if you like; styles are independent -->
+  <script>
+    (function () {
+      const els = document.querySelectorAll('.reveal-apm-section');
+      if (!els.length) return;
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(el => el.classList.add('is-visible-apm-section')); return;
+      }
+      const io = new IntersectionObserver((entries)=>entries.forEach(e=>{
+        e.target.classList.toggle('is-visible-apm-section', e.isIntersecting);
+      }),{threshold:0.18});
+      els.forEach(el=>io.observe(el));
+    })();
+  </script>
+
+  <script>
+    (function () {
+      const els = document.querySelectorAll('.reveal-mobility');
+      if (!('IntersectionObserver' in window) || !els.length) {
+        els.forEach(el => el.classList.add('is-visible-mobility')); return;
+      }
+      const io = new IntersectionObserver((entries)=>entries.forEach(e=>{
+        e.target.classList.toggle('is-visible-mobility', e.isIntersecting);
+      }),{threshold:0.18});
+      els.forEach(el=>io.observe(el));
+    })();
+  </script>
+
+  {% include 'footer.html' %}
+</body>
+</html>

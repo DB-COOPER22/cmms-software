@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IoT &amp; SCADA Integration — CARL</title>
+
+  <!-- Site styles shared with other pages -->
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Page-specific (mirrors factory.css structure) -->
+  <link rel="stylesheet" href="{% static 'css/iot-scada.css' %}">
+</head>
+
+<body>
+  {% include 'header.html' %}
+
+  <!-- HERO (keeps same layout tone as factory hero) -->
+  <section class="hero-section scada-hero">
+    <div class="container">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1 class="hero-title">IoT &amp; SCADA Integration</h1>
+          <p class="hero-subtitle">
+            Stream real-time telemetry to CARL for work orders, alarms, and asset health — securely and at scale.
+          </p>
+          <div class="hero-buttons">
+            <a href="#integrations" class="btn btn-primary">How it works</a>
+            <a href="#quickstart" class="btn btn-secondary">Quick start</a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <!-- Replace this with your own artwork -->
+          {% comment %} <img src="{% static 'images/banner/iot-scada.jpg' %}" alt="IoT & SCADA Illustration" class="hero-img"> {% endcomment %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: What you can integrate -->
+  <section id="integrations" class="features-section">
+    <div class="container">
+      <div class="scada-container">
+        <div class="scada-overview">
+          <h2>A unified bridge between edge signals and maintenance</h2>
+          <p class="scada-about-text">
+            Connect SCADA historians, PLC tags, and IoT sensors directly with CARL. Use live readings to trigger
+            Work Requests/Work Orders, visualize health, and keep your teams proactive.
+          </p>
+          {% comment %} <img src="{% static 'images/laptop.jpg' %}" alt="Telemetry to CARL" class="scada-img"> {% endcomment %}
+        </div>
+
+        <div class="scada-advantages">
+          <h3><i class="fa-solid fa-plug"></i> What you can integrate</h3>
+          <ul class="scada-list">
+            <li>SCADA historians and PLC tag streams (via Modbus/TCP, OPC-UA front-ends).</li>
+            <li>IoT gateways &amp; sensors: energy, vibration, temperature, water, fuel, GPS.</li>
+            <li>Edge anomaly detection rules that create <strong>WR/WO</strong> in CARL on thresholds.</li>
+            <li>Secure service users and token-based API access for integrations.</li>
+          </ul>
+
+          <div class="scada-card">
+            <strong>Security-first:</strong>
+            Use token auth, enforce TLS, and least-privilege service users for data flows.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: How it works (reverse) -->
+  <section class="features-section">
+    <div class="container">
+      <div class="scada-container reverse">
+        <div class="scada-overview">
+          <h2>How it works</h2>
+          <p class="scada-about-text">
+            Gateways post single or batched readings to CARL. Dashboards and rules query trends and thresholds.
+            When limits are exceeded, CARL can open Work Requests or Work Orders linked to the equipment.
+          </p>
+
+          <div class="scada-card">
+            <p>
+              <span class="scada-chip">POST /api/measure-readings/v1/add</span>
+              &nbsp;&nbsp;
+              <span class="scada-chip">POST /api/measure-readings/v1/add-all</span>
+            </p>
+            <p>
+              <span class="scada-chip">GET /api/entities/v1/measurereading?filter[measurePoint.id]=ID&amp;sort=dateMeasure</span>
+            </p>
+            <p>
+              <span class="scada-chip">POST /api/entities/v1/mr</span>
+              <small>(or your rules service to create WR/WO)</small>
+            </p>
+          </div>
+        </div>
+
+        <div class="scada-advantages">
+          <h3><i class="fa-solid fa-diagram-project"></i> Data flow</h3>
+          <ul class="scada-list">
+            <li><strong>Ingest readings</strong> mapped to <em>Reading Points</em>.</li>
+            <li><strong>Query trends</strong> for dashboards and alerting.</li>
+            <li><strong>Automate maintenance</strong> by creating WR/WO on conditions.</li>
+            <li><strong>Link to equipment</strong> for full traceability and history.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Built for operations -->
+  <section class="features-section">
+    <div class="container">
+      <div class="scada-container">
+        <div class="scada-overview">
+          <h2>Built for operations</h2>
+          <p class="scada-about-text">
+            Scale from pilot sensors to plant-wide telemetry. Use batch ingest to reduce overhead, authenticate
+            via tokens, and pair each physical tag to a dedicated Reading Point.
+          </p>
+        </div>
+
+        <div class="scada-advantages">
+          <ul class="scada-list">
+            <li><strong>High-frequency ready:</strong> batch with <span>/measure-readings/v1/add-all</span>.</li>
+            <li><strong>Token auth:</strong> obtain <span>X-CS-Access-Token</span> via <span>/auth/v1/authenticate</span>.</li>
+            <li><strong>Sensor pairing:</strong> one Reading Point per tag for clean histories.</li>
+            <li><strong>Idempotent batching:</strong> handle edge retries without duplicates.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Quick start (gateway) -->
+  <section id="quickstart" class="features-section">
+    <div class="container">
+      <div class="scada-container reverse">
+        <div class="scada-overview">
+          <h2>Quick start (gateway)</h2>
+          <pre class="scada-code"># Pseudocode — post a batch
+POST https://&lt;server&gt;/gmaoCS02/api/measure-readings/v1/add-all
+Headers: X-CS-Access-Token: &lt;token&gt;
+Body:
+{
+  "data": [
+    { "measurePoint": {"id": "6"}, "measure": 11000, "measuredAt": "2025-09-08T10:00:00" },
+    { "measurePoint": {"id": "6"}, "measure": 11005, "measuredAt": "2025-09-08T10:05:00" }
+  ]
+}</pre>
+        </div>
+
+        <div class="scada-advantages">
+          <h3><i class="fa-solid fa-shield-halved"></i> Best practices</h3>
+          <ul class="scada-list">
+            <li>Use <strong>token auth</strong> (never pass credentials in the URL).</li>
+            <li>Timestamp using <strong>ISO-8601</strong> with timezone.</li>
+            <li>Keep a <strong>1:1 mapping</strong> tag → Reading Point.</li>
+            <li>Implement <strong>idempotent</strong> batch retries at the edge.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+
+  <!-- Optional: Bootstrap (if used elsewhere on site) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

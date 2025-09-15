@@ -43,6 +43,19 @@ def mobility(request):
 def plans(request):
     return render(request, 'plans.html')
 
+def about(request):
+    return render(request, 'about.html')
+def workorder(request):
+    return render(request, "workorder.html")
+def compliance(request):
+    return render(request, "compliance.html")
+def scada(request):
+    return render(request, "scada.html")
+def gis(request):
+    return render(request, "gis.html")
+def erpsync(request):
+    return render(request, "erpsync.html")
+
 
 def _send_contact_email_async(subject, body):
     """Send email in background; print any error to console."""

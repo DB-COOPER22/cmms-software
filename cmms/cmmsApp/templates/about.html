@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mobility.css' %}">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="{% static 'images/logo1.png' %}">
+
+
+</head>
+
+<body>
+    {% include 'header.html' %}
+
+    {% load static %}
+    <section class="cmms-contact-form-section" style="background-image: url('../static/images/banner/contact.png');">
+        <div class="cmms-contact-form-overlay"></div>
+        <div class="cmms-contact-form-container reveal-mobility">
+            <a href="#contact" style="color: white;"><span class="cmms-contact-form-badge">
+                    <span class="cmms-contact-form-dot reveal-mobility"></span> About us
+                </span>
+            </a>
+            <h1 class="cmms-contact-form-title reveal-mobility">About iEngineering Australia</h1>
+
+        </div>
+    </section>
+
+    <section class="cmms-contact-form-wrap">
+        <div class="cmms-contact-form-inner">
+
+            <a href="#contact" class="cmms-contact-form-badge2 reveal-mobility">
+                <span class="cmms-contact-form-dot2 reveal-mobility"></span> About Us
+            </a>
+
+            <h2 class="cmms-contact-form-heading2 reveal-mobility">
+                About us – where vision meets execution!
+            </h2>
+
+            
+            
+                <p class="about-text-abou-ieng reveal-mobility">
+                    iEngineering Australia is a technology-driven solutions provider specializing in engineering
+                    software, industrial automation, and digital transformation services. We partner with
+                    organizations across multiple industries to deliver innovative, scalable, and cost-effective
+                    solutions tailored to their operational needs. With a strong focus on reliability,
+                    customer-centricity, and sustainability, our mission is to empower businesses with tools
+                    that enhance efficiency, improve asset performance, and drive growth.
+                </p>
+
+        </div>
+    </section>
+
+    <section class="section-about-ieng-mission">
+  <div class="container-about-ieng-mission">
+    <!-- Left: Chart Card -->
+    <aside class="card-about-ieng-mission" aria-label="Total installs">
+      <div class="badge-about-ieng-mission reveal-mobility">Total installs</div>
+
+      <!-- Simple inline SVG chart to mimic the design -->
+      <div class="chart-wrap-about-ieng-mission">
+        <svg viewBox="0 0 360 260" class="chart-about-ieng-mission" role="img" aria-label="Installs 2017-2022">
+          <!-- y-scale labels -->
+          <g class="chart-y-about-ieng-mission reveal-mobility">
+            <text x="12" y="40">500k</text>
+            <text x="12" y="80">400k</text>
+            <text x="12" y="120">300k</text>
+            <text x="12" y="160">200k</text>
+            <text x="12" y="200">100k</text>
+          </g>
+          <!-- bars -->
+          <g class="chart-bars-about-ieng-mission reveal-mobility">
+            <rect x="70"  y="170" width="35" height="60" rx="6"></rect>
+            <rect x="120" y="120" width="35" height="110" rx="6"></rect>
+            <rect x="170" y="140" width="35" height="90" rx="6"></rect>
+            <rect x="220" y="130" width="35" height="100" rx="6"></rect>
+            <rect x="270" y="110" width="35" height="120" rx="6"></rect>
+            <rect x="320" y="40"  width="35" height="190" rx="6" class="bar-strong-about-ieng-mission"></rect>
+            <text x="326" y="35" class="bar-badge-about-ieng-mission">+90k</text>
+          </g>
+          <!-- x labels -->
+          <g class="chart-x-about-ieng-mission reveal-mobility">
+            <text x="72"  y="230">2017</text>
+            <text x="122" y="230">2018</text>
+            <text x="172" y="230">2019</text>
+            <text x="222" y="230">2020</text>
+            <text x="272" y="230">2021</text>
+            <text x="322" y="230">2022</text>
+          </g>
+        </svg>
+      </div>
+
+      <button class="cta-about-ieng-mission reveal-mobility" type="button">
+        Explore More <span aria-hidden="true">→</span>
+      </button>
+    </aside>
+
+    <!-- Right: Tabs + Content -->
+    <div class="panel-about-ieng-mission">
+      <div class="tabs-about-ieng-mission" role="tablist" aria-label="About tabs">
+        <button class="tab-about-ieng-mission is-active-about-ieng-mission reveal-mobility"
+                role="tab" aria-selected="true"
+                data-target="#mission-about-ieng-mission">Mission</button>
+        <button class="tab-about-ieng-mission reveal-mobility"
+                role="tab" aria-selected="false"
+                data-target="#values-about-ieng-mission">Vision</button>
+        <button class="tab-about-ieng-mission reveal-mobility"
+                role="tab" aria-selected="false"
+                data-target="#services-about-ieng-mission">Values</button>
+      </div>
+
+      <!-- Mission -->
+      <article id="mission-about-ieng-mission"
+               class="content-about-ieng-mission is-visible-about-ieng-mission" role="tabpanel">
+        <h2 class="title-about-ieng-mission reveal-mobility">
+          Our Mission
+        </h2>
+        <p class="text-about-ieng-mission reveal-mobility">
+          Our mission includes investing in research and development and enforcing stringent quality control for a better tomorrow. Moreover, we aim to achieve Excellence in Project Execution and Operational Efficiency with the highest level of Safety, Quality, Reliability, and Environmental measures in place. We encourage Ideas, Talent, and value feedback to become an Employer of Choice.
+        </p>
+      </article>
+
+      <!-- Values -->
+      <article id="values-about-ieng-mission" class="content-about-ieng-mission" role="tabpanel" hidden>
+        <h2 class="title-about-ieng-mission reveal-mobility">
+          Our Vision
+        </h2>
+        <p class="text-about-ieng-mission reveal-mobility">
+          To be the strategic partner of choice for digital transformation in asset-intensive industries and smart cities worldwide.
+        </p>
+      </article>
+
+      <!-- Services (ul > li only for the lines) -->
+      <article id="services-about-ieng-mission" class="content-about-ieng-mission" role="tabpanel" hidden>
+        <h2 class="title-about-ieng-mission reveal-mobility">
+         Our Values
+        </h2>
+        <ul class="list-about-ieng-mission reveal-mobility">
+          <li>Innovation</li>
+          <li>Reliability</li>
+          <li>Customer-Centricity</li>
+          <li>Sustainability</li>
+          <li>Security & Compliance</li>
+        </ul>
+        
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section-meet-ieng-about" id="team">
+  <div class="container-meet-ieng-about">
+    <header class="header-meet-ieng-about">
+      <h2 class="title-meet-ieng-about reveal-mobility">Our Journey</h2>
+      <p class="subtitle-meet-ieng-about reveal-mobility">
+        Founded in 2017, iEngineering Australia has rapidly grown into a trusted technology partner delivering innovative solutions in asset management, IoT, cloud platforms, and digital transformation. From our beginnings as a small engineering services provider, we have expanded our expertise across industries such as utilities, transport, energy, manufacturing, and public infrastructure. Today, we are proud to support organizations across Australia and the Asia-Pacific region with smart, scalable, and future-ready technology solutions.
+      </p>
+    </header>
+  
+
+        </div>
+    </section>
+<section class="section-meet-ieng-about" id="team">
+  <div class="container-meet-ieng-about">
+    <header class="header-meet-ieng-about">
+      <h2 class="title-meet-ieng-about reveal-mobility">Meet Our Team</h2>
+      <p class="subtitle-meet-ieng-about reveal-mobility">
+        At iEngineering Australia, our success is driven by a dedicated team of leaders,
+        engineers, and professionals who bring innovation and expertise to every project.
+      </p>
+    </header>
+
+    <div class="grid-meet-ieng-about">
+      <!-- Card 1 -->
+      <article class="card-meet-ieng-about" tabindex="0" aria-label="Durgeshan Naiker, Director & CEO">
+        <figure class="flip-meet-ieng-about reveal-mobility">
+          <div class="face-front-meet-ieng-about reveal-mobility">
+            <img src="https://images.unsplash.com/photo-1519241047957-be31d7379a5d?q=80&w=1200&auto=format&fit=crop"
+                 alt="Durgeshan Naiker portrait" class="img-meet-ieng-about" />
+          </div>
+          <div class="face-back-meet-ieng-about">
+            <h3 class="name-meet-ieng-about">Durgeshan Naiker</h3>
+            <p class="role-meet-ieng-about">Director &amp; CEO</p>
+            <p class="bio-meet-ieng-about">
+              Visionary leader guiding strategy, innovation, and growth across regions.
+            </p>
+          </div>
+        </figure>
+        <div class="body-meet-ieng-about reveal-mobility">
+          <h4 class="caption-name-meet-ieng-about">Durgeshan Naiker</h4>
+          <span class="caption-role-meet-ieng-about">Director &amp; CEO</span>
+          <div class="socials-meet-ieng-about">
+            <a href="#" class="pill-meet-ieng-about">Instagram</a>
+            <a href="#" class="pill-meet-ieng-about">Facebook</a>
+            <a href="#" class="pill-meet-ieng-about">Whatsapp</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card-meet-ieng-about" tabindex="0" aria-label="Shila More, General Manager">
+        <figure class="flip-meet-ieng-about reveal-mobility">
+          <div class="face-front-meet-ieng-about reveal-mobility">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop"
+                 alt="Shila More portrait" class="img-meet-ieng-about" />
+          </div>
+          <div class="face-back-meet-ieng-about">
+            <h3 class="name-meet-ieng-about">Shila More</h3>
+            <p class="role-meet-ieng-about">General Manager</p>
+            <p class="bio-meet-ieng-about">
+              Oversees operations, client relationships, and smooth project delivery.
+            </p>
+          </div>
+        </figure>
+        <div class="body-meet-ieng-about">
+          <h4 class="caption-name-meet-ieng-about reveal-mobility">Shila More</h4>
+          <span class="caption-role-meet-ieng-about">General Manager</span>
+          <div class="socials-meet-ieng-about">
+            <a href="#" class="pill-meet-ieng-about">Instagram</a>
+            <a href="#" class="pill-meet-ieng-about">Facebook</a>
+            <a href="#" class="pill-meet-ieng-about">Whatsapp</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card-meet-ieng-about" tabindex="0" aria-label="Mayur Mane, Software Team Manager">
+        <figure class="flip-meet-ieng-about reveal-mobility">
+          <div class="face-front-meet-ieng-about reveal-mobility">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop"
+                 alt="Mayur Mane portrait" class="img-meet-ieng-about" />
+          </div>
+          <div class="face-back-meet-ieng-about">
+            <h3 class="name-meet-ieng-about">Mayur Mane</h3>
+            <p class="role-meet-ieng-about">Software Team Manager</p>
+            <p class="bio-meet-ieng-about">
+              Leads the software team, driving product innovation and quality assurance.
+            </p>
+          </div>
+        </figure>
+        <div class="body-meet-ieng-about">
+          <h4 class="caption-name-meet-ieng-about">Mayur Mane</h4>
+          <span class="caption-role-meet-ieng-about">Software Team Manager</span>
+          <div class="socials-meet-ieng-about">
+            <a href="#" class="pill-meet-ieng-about">Instagram</a>
+            <a href="#" class="pill-meet-ieng-about">Facebook</a>
+            <a href="#" class="pill-meet-ieng-about">Whatsapp</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section-meet-ieng-about" id="team">
+  <div class="container-meet-ieng-about">
+    <header class="header-meet-ieng-about">
+      <h2 class="title-meet-ieng-about reveal-mobility">Where We Operate</h2>
+      <p class="subtitle-meet-ieng-about reveal-mobilitysaw">
+        iEngineering Australia operates across Australia, Fiji, and India, delivering reliable technology and asset management solutions to organizations of all sizes—from local enterprises to large multinational companies.
+
+
+      </p>
+    </header>
+
+
+
+    <section class="cmms-contact-form-loc-wrap">
+
+        <div class="cmms-contact-form-loc-grid">
+
+            <!-- Australia – Sydney -->
+            <article class="cmms-contact-form-loc-card cmms-contact-form-loc-card--au">
+                <header class="cmms-contact-form-loc-header">
+                    <span class="cmms-contact-form-loc-icon">
+                        <!-- location pin -->
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
+                        </svg>
+                    </span>
+                    <h3 class="cmms-contact-form-loc-title">Australia – Sydney</h3>
+                </header>
+
+                <p class="cmms-contact-form-loc-phone"><strong>Phone:</strong> +61 (02) 8318 1490</p>
+                <p class="cmms-contact-form-loc-email"><strong>Email: </strong><a
+                        href="mailto:dnaiker@iengaust.com.au">dnaiker@iengaust.com.au </a></p>
+                <p class="cmms-contact-form-loc-address">
+                    Warawara Cct, Quakers Hill NSW 2763, Australia
+                </p>
+
+                <a class="cmms-contact-form-loc-map" target="_blank" rel="noopener"
+                    href="https://www.google.com/maps?ll=-33.723524,150.875902&z=5&t=m&hl=en-US&gl=US&mapclient=embed&cid=2860432314088839065">
+                    View map
+                </a>
+            </article>
+
+            <!-- India – Pune -->
+            <article class="cmms-contact-form-loc-card cmms-contact-form-loc-card--in">
+                <header class="cmms-contact-form-loc-header">
+                    <span class="cmms-contact-form-loc-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
+                        </svg>
+                    </span>
+                    <h3 class="cmms-contact-form-loc-title">India – Pune</h3>
+                </header>
+
+                <p class="cmms-contact-form-loc-phone"><strong>Phone: </strong>+91 9168627258</p>
+                <p class="cmms-contact-form-loc-email"><strong>Email: </strong><a
+                        href="mailto:shila@iengaust.com.au">shila@iengaust.com.au</a></p>
+                <p class="cmms-contact-form-loc-address">
+                    Navale IT Zone, Office No. 501, 5th Floor, A-Wing, Near Navale Bridge, Mumbai-Bangalore Highway,
+                    Narhe, Pune – 411041.
+                </p>
+
+                <a class="cmms-contact-form-loc-map" target="_blank" rel="noopener"
+                    href="https://www.google.com/maps/place/Navale+IT+Zone+Phase2/@18.4597518,73.8199254,17z/data=!4m10!1m2!2m1!1sNavale+IT+Zone,+Office+No.+501,+5th+Floor,+A-Wing,+Near+Navale+Bridge,+Mumbai-Bangalore+Highway,+Narhe,+Pune+-+411041.!3m6!1s0x3bc29581263a8289:0x46a3bd2b894b95d7!8m2!3d18.4597518!4d73.8225003!15sCnZOYXZhbGUgSVQgWm9uZSwgT2ZmaWNlIE5vLiA1MDEsIDV0aCBGbG9vciwgQS1XaW5nLCBOZWFyIE5hdmFsZSBCcmlkZ2UsIE11bWJhaS1CYW5nYWxvcmUgSGlnaHdheSwgTmFyaGUsIFB1bmUgLSA0MTEwNDEukgEQY29ycG9yYXRlX29mZmljZeABAA!16s%2Fg%2F11g2xn_jj5?hl=en-US&entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D">
+                    View map
+                </a>
+            </article>
+
+            <!-- Fiji – Suva -->
+            <article class="cmms-contact-form-loc-card cmms-contact-form-loc-card--fj">
+                <header class="cmms-contact-form-loc-header">
+                    <span class="cmms-contact-form-loc-icon">
+                        <!-- mail -->
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
+                        </svg>
+                    </span>
+                    <h3 class="cmms-contact-form-loc-title">Fiji – Suva</h3>
+                </header>
+
+                <p class="cmms-contact-form-loc-phone"><strong>Phone: </strong>+679 9488589</p>
+                <p class="cmms-contact-form-loc-email"><strong>Email: </strong><a
+                        href="mailto:dnaiker@iengaust.com.au ">dnaiker@iengaust.com.au </a></p>
+                <p class="cmms-contact-form-loc-address">
+                    Lot 17, River Drive, Pacific Harbour, Navua, Suva, Fiji.
+                </p>
+
+                <a class="cmms-contact-form-loc-map" target="_blank" rel="noopener"
+                    href="https://www.google.com/maps/search/Lot+17,+River+Drive+Pacific+Harbour+Navua+Suva+Fiji/@-18.1642523,177.6272352,9z/data=!3m1!4b1?hl=en-US&entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D">
+                    View map
+                </a>
+            </article>
+
+        </div>
+    </section>
+</div>
+</section>
+    {% include 'footer.html' %}
+    <script src="{% static 'js/main.js'%}"></script>
+    <script defer src="{% static 'js/mission.js'%}"></script>
+
+      <script>
+        /* IntersectionObserver reveal — shows elements when they enter the viewport,
+           hides them again when they leave (works on scroll down and up). */
+        (function () {
+            const els = document.querySelectorAll('.reveal-mobility');
+            if (!('IntersectionObserver' in window) || !els.length) {
+                els.forEach(el => el.classList.add('is-visible-mobility'));
+                return;
+            }
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible-mobility');
+                    } else {
+                        entry.target.classList.remove('is-visible-mobility');
+                    }
+                });
+            }, { threshold: 0.18 });
+
+            els.forEach(el => io.observe(el));
+        })();
+    </script>
+    
+</body>
+
+</html>

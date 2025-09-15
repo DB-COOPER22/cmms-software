@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compliance & Safety Management</title>
+  <link rel="stylesheet" href="{% static 'css/compliance.css' %}">
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/factory.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    {% include 'header.html' %}
+    <header class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="headline">Compliance & Safety Management</h1>
+        <p class="description-mobility">Ensure your operations meet regulatory, safety, and environmental standards with
+          CARL’s integrated compliance framework.</p>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-primary">Request a demo</a>
+          <a href="#" class="btn btn-primary">Talk to an expert</a>
+        </div>
+      </div>
+    </header>
+    
+        <section class="features-section">
+            <div class="container reveal-mobility">
+                <h2>Compliance & Safety Management</h2>
+                <p class="subheading reveal-mobility">Ensure your operations meet regulatory, safety, and environmental standards with CARL’s integrated compliance framework.</p>
+
+            </div>
+        </section>
+
+
+
+    <section class="core-capabilities-apm-section">
+      <div class="wrap-apm-section">
+        <h2 class="title-apm-section reveal-apm-section reveal-mobility" style="--delay-apm-section:0ms;">
+         <i class="fas fa-shield-alt section-icon"></i> Key Compliance Features
+        </h2>
+        <span class="title-underline-apm-section reveal-apm-section" style="--delay-apm-section:80ms;"></span>
+
+        <div class="grid-apm-section">
+          <!-- 1 -->
+          <article class="card-apm-section reveal-apm-section" style="--delay-apm-section:0ms;">
+            <!-- <div class="icon-apm-section" aria-hidden="true"></div> -->
+            <h3 class="card-title-apm-section reveal-mobility">Role-Based Access</h3>
+            <ul class="card-list-apm-section reveal-mobility">
+              <li>Define access levels based on user roles</li>
+                <li>Ensure only authorized users handle sensitive data</li>
+                <li>Full audit trail of changes and approvals</li>
+              
+            </ul>
+          </article>
+
+          <!-- 2 -->
+          <article class="card-apm-section reveal-apm-section" style="--delay-apm-section:80ms;">
+            <!-- <div class="icon-apm-section" aria-hidden="true"></div> -->
+            <h3 class="card-title-apm-section reveal-mobility">Safety & Risk Controls</h3>
+            <ul class="card-list-apm-section reveal-mobility">
+               <li>Integrate LOTO, PPE, and Permit-to-Work procedures</li>
+                <li>Risk assessments linked to work orders</li>
+                <li>Mandatory safety checklists before execution</li>
+            </ul>
+          </article>
+
+          <!-- 3 -->
+          <article class="card-apm-section reveal-apm-section" style="--delay-apm-section:0ms;">
+            <!-- <div class="icon-apm-section" aria-hidden="true"></div> -->
+            <h3 class="card-title-apm-section reveal-mobility">Regulatory Reporting</h3>
+            <ul class="card-list-apm-section reveal-mobility">
+              <li>Auto-generate compliance reports for audits</li>
+                <li>Monitor KPI trends for safety & quality metrics</li>
+                <li>Document version control for all records</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="core-capabilities-apm-section">
+      <div class="wrap-apm-section">
+        <h2 class="title-apm-section reveal-apm-section reveal-mobility" style="--delay-apm-section:0ms;">
+         <i class="fas fa-check-circle section-icon"></i> Compliance Benefits
+        </h2>
+        <span class="title-underline-apm-section reveal-apm-section" style="--delay-apm-section:80ms;"></span>
+
+        <div class="grid-apm-section">
+          <!-- 1 -->
+          <article class="card-apm-section reveal-apm-section" style="--delay-apm-section:0ms;">
+            <!-- <div class="icon-apm-section" aria-hidden="true"></div> -->
+            <h3 class="card-title-apm-section reveal-mobility">Risk Reduction</h3>
+            <ul class="card-list-apm-section reveal-mobility">
+              <li>Prevent incidents with proactive risk mitigation and automated safety workflows.</li>
+            </ul>
+          </article>
+
+          <!-- 2 -->
+          <article class="card-apm-section reveal-apm-section" style="--delay-apm-section:80ms;">
+            <!-- <div class="icon-apm-section" aria-hidden="true"></div> -->
+            <h3 class="card-title-apm-section reveal-mobility">Operational Efficiency</h3>
+            <ul class="card-list-apm-section reveal-mobility">
+              <li>Standardized processes ensure faster approvals and reduced administrative overhead.</li>
+            </ul>
+          </article>
+
+          <!-- 3 -->
+          <article class="card-apm-section reveal-apm-section" style="--delay-apm-section:0ms;">
+            <!-- <div class="icon-apm-section" aria-hidden="true"></div> -->
+            <h3 class="card-title-apm-section reveal-mobility">Audit-Ready at Any Time</h3>
+            <ul class="card-list-apm-section reveal-mobility">
+              <li>Keep your documentation, checklists, and reports ready for internal and external audits.</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    
+  </main>
+  <script>
+    (function () {
+      const els = document.querySelectorAll('.reveal-apm-section');
+      if (!els.length) return;
+
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(el => el.classList.add('is-visible-apm-section'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible-apm-section');
+          } else {
+            // remove so it reveals again when you scroll back up
+            entry.target.classList.remove('is-visible-apm-section');
+          }
+        });
+      }, { threshold: 0.18 });
+
+      els.forEach(el => io.observe(el));
+    })();
+  </script>
+
+
+    <script>
+        /* IntersectionObserver reveal — shows elements when they enter the viewport,
+           hides them again when they leave (works on scroll down and up). */
+        (function () {
+            const els = document.querySelectorAll('.reveal-mobility');
+            if (!('IntersectionObserver' in window) || !els.length) {
+                els.forEach(el => el.classList.add('is-visible-mobility'));
+                return;
+            }
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible-mobility');
+                    } else {
+                        entry.target.classList.remove('is-visible-mobility');
+                    }
+                });
+            }, { threshold: 0.18 });
+
+            els.forEach(el => io.observe(el));
+        })();
+    </script>
+  {% include 'footer.html' %}
+
+</body>
+
+</html>
