@@ -5,6 +5,7 @@ from .views import contact_section
 app_name = 'cmmsApp'
 
 urlpatterns = [
+     path("request-demo/", views.request_demo_view, name="request_demo"),
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('factory/', views.factory, name='factory'),

@@ -6,13 +6,85 @@ from django.conf import settings
 from pathlib import Path
 from datetime import datetime
 from threading import Thread
-
+import re
 from openpyxl import Workbook
 from openpyxl.utils import get_column_letter
 import os
 from .forms import ContactForm
 from .utils_excel import append_submission_xlsx
 from .utils_contact import normalize_phone_and_country, country_name_from_alpha2
+
+
+EXCEL_DIR = os.path.join(settings.BASE_DIR, "data")
+EXCEL_PATH = os.path.join(EXCEL_DIR, "carl_demo_requests.xlsx")
+
+NAME_RE   = re.compile(r"^[A-Za-z\s'.-]{2,}$")
+PHONE_RE  = re.compile(r"^\+?\d[\d\s\-()]{6,}$")
+
+def _append_to_excel(row):
+    os.makedirs(EXCEL_DIR, exist_ok=True)
+    if os.path.exists(EXCEL_PATH):
+        wb = load_workbook(EXCEL_PATH)
+        ws = wb.active
+    else:
+        wb = Workbook()
+        ws = wb.active
+        ws.title = "Requests"
+        headers = ["Timestamp","Full Name","Company","Email","Country","Dial Code",
+                   "Phone","Address","Message","Source IP"]
+        ws.append(headers)
+        for i in range(1, len(headers)+1):
+            ws.column_dimensions[get_column_letter(i)].width = 24
+    ws.append(row)
+    wb.save(EXCEL_PATH)
+
+def request_demo_view(request: HttpRequest):
+    if request.method == "POST":
+        full_name = request.POST.get("full_name","").strip()
+        company   = request.POST.get("company","").strip()
+        email     = request.POST.get("email","").strip()
+        phone     = request.POST.get("phone","").strip()
+        country   = request.POST.get("country","").strip()  # "IN|+91"
+        address   = request.POST.get("address","").strip()
+        message   = request.POST.get("message","").strip()
+
+        errors = {}
+        if not NAME_RE.match(full_name):
+            errors["full_name"] = "Enter a valid name (letters only)."
+
+        if not company:
+            errors["company"] = "Company is required."
+
+        try:
+            validate_email(email)
+        except ValidationError:
+            errors["email"] = "Enter a valid email address."
+
+        if not PHONE_RE.match(phone):
+            errors["phone"] = "Enter a valid phone number."
+
+        if not country:
+            errors["country"] = "Please select a country."
+
+        # on error, re-render modal page if you use it standalone
+        if errors:
+            return render(request, "request_demo_popup.html", {"errors": errors})
+
+        country_code, dial = (country.split("|", 1) + [""])[:2]
+
+        _append_to_excel([
+            datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC"),
+            full_name, company, email,
+            country_code, dial, phone, address, message,
+            request.META.get("REMOTE_ADDR",""),
+        ])
+        return redirect("contact_thanks")
+
+    # GET fallback (if you open page directly)
+    return render(request, "request_demo_popup.html")
+
+def thanks_view(request):
+    return render(request, "contact_thanks.html")
 
 
 
